@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --deep-teal: #07545A;
+    --dark-teal: #053C40;
+    --accent-orange: #FF9D00;
+    --accent-orange-hover: #E58D00;
+    --warm-cream: #FFFDF9;
+    --warm-cream-alt: #F8F4EB;
+    --dark-text: #18383A;
+    --muted-text: #597274;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFFDF9;
+    color: #18383A;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body {
+    background-color: #FFFDF9;
+    color: #18383A;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #FF9D00;
+    color: #053C40;
+  }
+}
+
+/* Custom Utilities for Brand Palette */
+.bg-deep-teal { background-color: #07545A; }
+.text-deep-teal { color: #07545A; }
+.border-deep-teal { border-color: #07545A; }
+
+.bg-dark-teal { background-color: #053C40; }
+.text-dark-teal { color: #053C40; }
+
+.bg-accent-orange { background-color: #FF9D00; }
+.text-accent-orange { color: #FF9D00; }
+.border-accent-orange { border-color: #FF9D00; }
+
+.bg-warm-cream { background-color: #FFFDF9; }
+.bg-warm-cream-alt { background-color: #F8F4EB; }
+
+.text-dark-text { color: #18383A; }
+.text-muted-text { color: #597274; }

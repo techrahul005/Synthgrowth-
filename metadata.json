@@ -1,0 +1,6 @@
+{
+  "name": "SynthGrowth | Business Growth Agency",
+  "description": "SynthGrowth helps growing businesses with professional websites, AI automation and social media management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
