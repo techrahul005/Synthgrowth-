@@ -24,7 +24,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="w-6 h-0.5 bg-[#FF9D00]" aria-hidden="true" />
               <span className="text-xs sm:text-sm font-semibold tracking-wider text-[#07545A] uppercase">
-                {AGENCY_CONFIG.tagline}
+                OVVELA · {AGENCY_CONFIG.tagline}
               </span>
             </div>
 
@@ -36,7 +36,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
 
             {/* Short Description */}
             <p className="text-lg sm:text-xl text-[#597274] leading-relaxed mb-8 max-w-xl font-normal">
-              Professional websites, smart automation and consistent social media for growing businesses.
+              Helping businesses grow, build & scale. Professional websites, smart automation and consistent social media for growing businesses.
             </p>
 
             {/* CTAs */}
@@ -121,7 +121,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
               <div className="absolute bottom-4 left-4 sm:bottom-5 sm:left-5 px-3 py-1.5 rounded-lg bg-white/90 backdrop-blur-xs border border-[#07545A]/10 shadow-xs flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#FF9D00] animate-pulse" />
                 <span className="text-xs font-medium text-[#18383A]">
-                  Modern & Purpose-Built
+                  Ovvela · Modern & Purpose-Built
                 </span>
               </div>
             </div>

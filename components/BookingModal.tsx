@@ -50,7 +50,7 @@ export default function BookingModal({
   };
 
   const constructWhatsAppMessage = () => {
-    let msg = `Hello SynthGrowth, I'd like to book a discovery call.`;
+    let msg = `Hello ${AGENCY_CONFIG.name}, I'd like to book a discovery call.`;
     if (name) msg += `\nName: ${name}`;
     if (businessName) msg += `\nBusiness: ${businessName}`;
     if (preferredTopic) msg += `\nInterest: ${preferredTopic}`;
@@ -97,9 +97,9 @@ export default function BookingModal({
           <div className="flex items-center justify-between text-xs text-[#597274] mb-1.5 font-medium">
             <span className="flex items-center gap-1.5">
               <Calendar className="w-4 h-4 text-[#07545A]" />
-              Direct Scheduler
+              Direct Calendly Scheduler
             </span>
-            <span className="text-[11px] text-[#FF9D00] font-semibold">Configurable URL</span>
+            <span className="text-[11px] text-[#07545A] font-semibold">30 Min Call</span>
           </div>
 
           <div className="flex items-center justify-between gap-2 mt-2 bg-white px-3 py-2.5 rounded-lg border border-[#07545A]/15">
@@ -116,19 +116,19 @@ export default function BookingModal({
             <button
               onClick={handleCopyPlaceholder}
               type="button"
-              className="px-2.5 py-1 text-xs font-medium text-[#07545A] bg-[#F8F4EB] hover:bg-[#07545A] hover:text-white rounded transition-colors whitespace-nowrap"
+              className="px-2.5 py-1 text-xs font-medium text-[#07545A] bg-[#F8F4EB] hover:bg-[#07545A] hover:text-white rounded transition-colors whitespace-nowrap cursor-pointer"
             >
               {copiedLink ? (
                 <span className="flex items-center gap-1 text-emerald-600">
                   <Check className="w-3.5 h-3.5" /> Copied
                 </span>
               ) : (
-                'Copy Tag'
+                'Copy Link'
               )}
             </button>
           </div>
           <p className="text-[11px] text-[#597274] mt-2">
-            Configure your active scheduler link anytime in <code className="text-[#07545A] font-mono">lib/constants.ts</code>.
+            Click the link above to open our Calendly booking calendar directly.
           </p>
         </div>
 
@@ -179,7 +179,7 @@ export default function BookingModal({
             </button>
 
             <a
-              href={`mailto:${AGENCY_CONFIG.email}?subject=Booking Request: ${encodeURIComponent(preferredTopic)}&body=Hello SynthGrowth Team,%0D%0A%0D%0AI would like to schedule a call regarding: ${encodeURIComponent(preferredTopic)}.%0D%0A%0D%0ABest regards`}
+              href={`mailto:${AGENCY_CONFIG.email}?subject=Booking Request: ${encodeURIComponent(preferredTopic)}&body=Hello ${AGENCY_CONFIG.name} Team,%0D%0A%0D%0AI would like to schedule a call regarding: ${encodeURIComponent(preferredTopic)}.%0D%0A%0D%0ABest regards`}
               className="w-full py-2.5 px-4 bg-white hover:bg-[#F8F4EB] text-[#18383A] border border-[#07545A]/20 font-medium rounded-xl transition-colors flex items-center justify-center gap-2 text-sm"
             >
               <Mail className="w-4 h-4 text-[#07545A]" />

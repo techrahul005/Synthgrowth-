@@ -2,21 +2,21 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'SynthGrowth | Business Growth Agency',
-  description: 'SynthGrowth helps growing businesses with professional websites, AI automation and social media management.',
-  keywords: ['Business Growth Agency', 'Professional Website Development', 'AI Automation', 'Social Media Management', 'SynthGrowth'],
-  authors: [{ name: 'SynthGrowth' }],
+  title: 'Ovvela | Business Growth Agency',
+  description: 'Ovvela helps businesses grow, build and scale through modern digital solutions.',
+  keywords: ['Ovvela', 'Business Growth Agency', 'Professional Website Development', 'AI Automation', 'Social Media Management'],
+  authors: [{ name: 'Ovvela' }],
   openGraph: {
-    title: 'SynthGrowth | Business Growth Agency',
-    description: 'SynthGrowth helps growing businesses with professional websites, AI automation and social media management.',
+    title: 'Ovvela | Business Growth Agency',
+    description: 'Ovvela helps businesses grow, build and scale through modern digital solutions.',
     url: 'https://wa.me/918107425083',
-    siteName: 'SynthGrowth',
+    siteName: 'Ovvela',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SynthGrowth | Business Growth Agency',
-    description: 'SynthGrowth helps growing businesses with professional websites, AI automation and social media management.',
+    title: 'Ovvela | Business Growth Agency',
+    description: 'Ovvela helps businesses grow, build and scale through modern digital solutions.',
   },
   robots: {
     index: true,

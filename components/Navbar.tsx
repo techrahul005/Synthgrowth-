@@ -36,10 +36,10 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
           <a
             href="#"
             className="flex items-center gap-2 group focus:outline-hidden"
-            aria-label="SynthGrowth Home"
+            aria-label="Ovvela Home"
           >
             <span className="text-xl sm:text-2xl font-bold tracking-tight text-[#07545A] group-hover:text-[#053C40] transition-colors">
-              SynthGrowth
+              {AGENCY_CONFIG.name}
             </span>
             <span className="h-1.5 w-1.5 rounded-full bg-[#FF9D00]" aria-hidden="true" />
           </a>

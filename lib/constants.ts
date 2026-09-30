@@ -1,16 +1,21 @@
 // Centralized editable booking-link constant:
-export const BOOKING_LINK: string = "https://calendly.com/synthgrowth9598/30min";
+export const BOOKING_LINK: string = "https://calendly.com/hello-ovvela/30min";
 
 export const AGENCY_CONFIG = {
-  name: 'SynthGrowth',
+  name: 'Ovvela',
   tagline: 'BUSINESS GROWTH AGENCY',
   businessType: 'Business Growth Agency',
-  email: 'synthgrowth9598@gmail.com',
+  mainPositioning: 'Helping businesses grow, build & scale.',
+  secondaryPositioning: 'Turning ideas into real business growth.',
+  email: 'hello.ovvela@gmail.com',
   whatsappDisplay: '+91 8107425083',
   whatsappNumber: '918107425083',
   whatsappLink: 'https://wa.me/918107425083',
-  instagramDisplay: '@synthgrowth.agency',
-  instagramLink: 'https://instagram.com/synthgrowth.agency',
+  instagramDisplay: '@ovvela.co',
+  instagramLink: 'https://instagram.com/ovvela.co',
+  founderName: 'Rahul Prajapat',
+  founderInstagramDisplay: '@_rahuuuul.09_',
+  founderInstagramLink: 'https://instagram.com/_rahuuuul.09_',
   bookingLink: BOOKING_LINK,
 };
 

@@ -37,8 +37,8 @@ export default function Footer() {
             </a>
           </nav>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-4 text-sm font-medium">
+          {/* Social Links & Founder */}
+          <div className="flex flex-wrap items-center gap-5 text-sm font-medium">
             <a
               href={AGENCY_CONFIG.instagramLink}
               target="_blank"
@@ -47,7 +47,7 @@ export default function Footer() {
               aria-label="Instagram"
             >
               <Instagram className="w-4 h-4 text-[#FF9D00]" />
-              <span>Instagram</span>
+              <span>{AGENCY_CONFIG.instagramDisplay}</span>
             </a>
 
             <a
@@ -67,7 +67,17 @@ export default function Footer() {
               aria-label="Email"
             >
               <Mail className="w-4 h-4 text-[#FF9D00]" />
-              <span>Email</span>
+              <span>{AGENCY_CONFIG.email}</span>
+            </a>
+
+            <a
+              href={AGENCY_CONFIG.founderInstagramLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-xs text-[#597274] hover:text-[#07545A] transition-colors pl-1"
+              aria-label="Founder Profile"
+            >
+              <span>Founder: <strong className="font-semibold text-[#18383A]">{AGENCY_CONFIG.founderName}</strong></span>
             </a>
           </div>
 
@@ -75,7 +85,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#597274] gap-4">
-          <p>© 2026 SynthGrowth. All rights reserved.</p>
+          <p>© 2026 {AGENCY_CONFIG.name}. All rights reserved.</p>
           <p className="text-[11px] text-[#597274]/80">
             Professional Website Development • AI Automation • Social Media Management
           </p>

@@ -101,7 +101,7 @@ export default function ServiceDetailModal({
             Book a Call →
           </a>
           <a
-            href={`https://wa.me/${AGENCY_CONFIG.whatsappNumber}?text=${encodeURIComponent(`Hi SynthGrowth, I'd like to discuss ${service.title}.`)}`}
+            href={`https://wa.me/${AGENCY_CONFIG.whatsappNumber}?text=${encodeURIComponent(`Hi ${AGENCY_CONFIG.name}, I'd like to discuss ${service.title}.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="py-3 px-4 text-center font-medium text-[#07545A] bg-[#F8F4EB] hover:bg-[#EFE9DD] rounded-xl transition-colors flex items-center justify-center gap-2 text-sm"

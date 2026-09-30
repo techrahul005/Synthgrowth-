@@ -15,7 +15,7 @@ export default function FloatingWhatsApp() {
         target="_blank"
         rel="noopener noreferrer"
         className="group flex items-center gap-2.5 px-3.5 py-2.5 bg-[#07545A] hover:bg-[#053C40] text-white rounded-full shadow-lg hover:shadow-xl border border-white/20 transition-all duration-200 active:scale-95"
-        aria-label="Chat with SynthGrowth on WhatsApp"
+        aria-label={`Chat with ${AGENCY_CONFIG.name} on WhatsApp`}
       >
         <div className="relative">
           <MessageCircle className="w-5 h-5 text-[#FF9D00]" />

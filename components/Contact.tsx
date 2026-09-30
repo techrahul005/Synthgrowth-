@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MessageCircle, Mail, Instagram, ArrowRight, Send, Check } from 'lucide-react';
+import { MessageCircle, Mail, Instagram, ArrowRight, Send, Check, User } from 'lucide-react';
 import { AGENCY_CONFIG, BOOKING_LINK } from '@/lib/constants';
 
 interface ContactProps {
@@ -16,7 +16,7 @@ export default function Contact({ onOpenBooking }: ContactProps) {
 
   const handleSendViaWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
-    let text = `Hi SynthGrowth!`;
+    let text = `Hi Ovvela!`;
     if (senderName) text += ` My name is ${senderName}.`;
     if (senderBusiness) text += ` Business: ${senderBusiness}.`;
     if (message) text += `\n\nMessage: ${message}`;
@@ -39,34 +39,34 @@ export default function Contact({ onOpenBooking }: ContactProps) {
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#18383A] tracking-tight">
-            Let’s Talk
+            LET’S TALK
           </h2>
           <p className="mt-3 text-base sm:text-lg text-[#597274]">
-            Have questions about websites, automation, or social media? Reach out directly via WhatsApp, email, or schedule a call.
+            Have questions about websites, automation, or social media? Reach out directly to {AGENCY_CONFIG.name} via WhatsApp, email, or schedule a call.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Contact Methods Cards */}
-          <div className="lg:col-span-6 space-y-4">
+          <div className="lg:col-span-6 space-y-3.5">
             
             {/* WhatsApp Card */}
             <a
               href={AGENCY_CONFIG.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-white border border-[#07545A]/15 hover:border-[#FF9D00] shadow-xs hover:shadow-md transition-all group"
+              className="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-white border border-[#07545A]/15 hover:border-[#FF9D00] shadow-xs hover:shadow-md transition-all group"
             >
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-[#F8F4EB] group-hover:bg-[#FF9D00]/15 text-[#07545A] group-hover:text-[#FF9D00] transition-colors">
-                  <MessageCircle className="w-6 h-6" />
+                <div className="p-2.5 rounded-xl bg-[#F8F4EB] group-hover:bg-[#FF9D00]/15 text-[#07545A] group-hover:text-[#FF9D00] transition-colors">
+                  <MessageCircle className="w-5 h-5" />
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-[#597274] uppercase tracking-wider">
                     WhatsApp
                   </div>
-                  <div className="text-base sm:text-lg font-bold text-[#18383A] group-hover:text-[#07545A] transition-colors">
+                  <div className="text-sm sm:text-base font-bold text-[#18383A] group-hover:text-[#07545A] transition-colors">
                     {AGENCY_CONFIG.whatsappDisplay}
                   </div>
                 </div>
@@ -79,17 +79,17 @@ export default function Contact({ onOpenBooking }: ContactProps) {
             {/* Email Card */}
             <a
               href={`mailto:${AGENCY_CONFIG.email}`}
-              className="flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-white border border-[#07545A]/15 hover:border-[#FF9D00] shadow-xs hover:shadow-md transition-all group"
+              className="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-white border border-[#07545A]/15 hover:border-[#FF9D00] shadow-xs hover:shadow-md transition-all group"
             >
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-[#F8F4EB] group-hover:bg-[#FF9D00]/15 text-[#07545A] group-hover:text-[#FF9D00] transition-colors">
-                  <Mail className="w-6 h-6" />
+                <div className="p-2.5 rounded-xl bg-[#F8F4EB] group-hover:bg-[#FF9D00]/15 text-[#07545A] group-hover:text-[#FF9D00] transition-colors">
+                  <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-[#597274] uppercase tracking-wider">
                     Email
                   </div>
-                  <div className="text-base sm:text-lg font-bold text-[#18383A] group-hover:text-[#07545A] transition-colors break-all">
+                  <div className="text-sm sm:text-base font-bold text-[#18383A] group-hover:text-[#07545A] transition-colors break-all">
                     {AGENCY_CONFIG.email}
                   </div>
                 </div>
@@ -104,17 +104,17 @@ export default function Contact({ onOpenBooking }: ContactProps) {
               href={AGENCY_CONFIG.instagramLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-white border border-[#07545A]/15 hover:border-[#FF9D00] shadow-xs hover:shadow-md transition-all group"
+              className="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-white border border-[#07545A]/15 hover:border-[#FF9D00] shadow-xs hover:shadow-md transition-all group"
             >
               <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-[#F8F4EB] group-hover:bg-[#FF9D00]/15 text-[#07545A] group-hover:text-[#FF9D00] transition-colors">
-                  <Instagram className="w-6 h-6" />
+                <div className="p-2.5 rounded-xl bg-[#F8F4EB] group-hover:bg-[#FF9D00]/15 text-[#07545A] group-hover:text-[#FF9D00] transition-colors">
+                  <Instagram className="w-5 h-5" />
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-[#597274] uppercase tracking-wider">
                     Instagram
                   </div>
-                  <div className="text-base sm:text-lg font-bold text-[#18383A] group-hover:text-[#07545A] transition-colors">
+                  <div className="text-sm sm:text-base font-bold text-[#18383A] group-hover:text-[#07545A] transition-colors">
                     {AGENCY_CONFIG.instagramDisplay}
                   </div>
                 </div>
@@ -124,8 +124,34 @@ export default function Contact({ onOpenBooking }: ContactProps) {
               </span>
             </a>
 
+            {/* Founder Card */}
+            <a
+              href={AGENCY_CONFIG.founderInstagramLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-[#FAF6EE] border border-[#07545A]/15 hover:border-[#FF9D00] shadow-xs hover:shadow-md transition-all group"
+            >
+              <div className="flex items-center gap-4">
+                <div className="p-2.5 rounded-xl bg-white group-hover:bg-[#FF9D00]/15 text-[#07545A] group-hover:text-[#FF9D00] transition-colors">
+                  <User className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-semibold text-[#597274] uppercase tracking-wider">
+                    Founder
+                  </div>
+                  <div className="text-sm sm:text-base font-bold text-[#18383A] group-hover:text-[#07545A] transition-colors flex items-center gap-2">
+                    <span>{AGENCY_CONFIG.founderName}</span>
+                    <span className="text-xs font-normal text-[#597274]">({AGENCY_CONFIG.founderInstagramDisplay})</span>
+                  </div>
+                </div>
+              </div>
+              <span className="text-xs font-medium text-[#07545A] group-hover:text-[#FF9D00] flex items-center gap-1">
+                Profile →
+              </span>
+            </a>
+
             {/* Buttons: Book a Call & Chat on WhatsApp */}
-            <div className="pt-4 flex flex-col sm:flex-row gap-3">
+            <div className="pt-2 flex flex-col sm:flex-row gap-3">
               <a
                 href={BOOKING_LINK}
                 target="_blank"
