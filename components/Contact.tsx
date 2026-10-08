@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { MessageCircle, Mail, Instagram, ArrowRight, Send, Check, User } from 'lucide-react';
 import { AGENCY_CONFIG, BOOKING_LINK } from '@/lib/constants';
 
@@ -132,8 +133,15 @@ export default function Contact({ onOpenBooking }: ContactProps) {
               className="flex items-center justify-between p-4 sm:p-5 rounded-2xl bg-[#FAF6EE] border border-[#07545A]/15 hover:border-[#FF9D00] shadow-xs hover:shadow-md transition-all group"
             >
               <div className="flex items-center gap-4">
-                <div className="p-2.5 rounded-xl bg-white group-hover:bg-[#FF9D00]/15 text-[#07545A] group-hover:text-[#FF9D00] transition-colors">
-                  <User className="w-5 h-5" />
+                <div className="relative w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-[#07545A]/20 shadow-xs bg-white">
+                  <Image
+                    src="/founder-office-portrait.jpg"
+                    alt={`${AGENCY_CONFIG.founderName} - Founder of ${AGENCY_CONFIG.name}`}
+                    fill
+                    className="object-cover"
+                    sizes="48px"
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
                 <div>
                   <div className="text-xs font-semibold text-[#597274] uppercase tracking-wider">

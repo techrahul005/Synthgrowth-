@@ -73,7 +73,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             </div>
           </div>
 
-          {/* RIGHT SIDE: Hand-Drawn Editorial Illustration */}
+          {/* RIGHT SIDE: Founder Portrait in Modern Agency Office */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-lg lg:max-w-xl aspect-4/3 rounded-3xl overflow-hidden bg-[#FAF6EE] border border-[#07545A]/10 shadow-lg group">
               {/* Decorative warm ambient glow */}
@@ -86,11 +86,11 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                 aria-hidden="true" 
               />
 
-              {/* Hand-drawn editorial illustration image */}
+              {/* Founder Image */}
               {!imageError ? (
                 <Image
-                  src="/hero-illustration.jpg"
-                  alt="Editorial hand-drawn illustration of a creative professional working relaxed on a laptop in an orange bean bag lounge chair with coffee and plant"
+                  src="/founder-office-portrait.jpg"
+                  alt={`${AGENCY_CONFIG.founderName} - Founder of ${AGENCY_CONFIG.name}`}
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -102,7 +102,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                   referrerPolicy="no-referrer"
                 />
               ) : (
-                /* Styled SVG Line-Art Fallback if file read fails */
+                /* Styled Fallback if file read fails */
                 <div className="w-full h-full flex flex-col items-center justify-center p-8 bg-[#FAF6EE] text-[#18383A] text-center">
                   <div className="relative w-28 h-28 rounded-full bg-[#FF9D00]/15 flex items-center justify-center mb-4 border border-[#FF9D00]/30">
                     <Laptop className="w-12 h-12 text-[#07545A]" strokeWidth={1.5} />
@@ -110,18 +110,18 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                       <Coffee className="w-4 h-4" />
                     </div>
                   </div>
-                  <h3 className="font-semibold text-lg text-[#07545A]">Creative & Efficient Growth</h3>
+                  <h3 className="font-semibold text-lg text-[#07545A]">{AGENCY_CONFIG.founderName}</h3>
                   <p className="text-xs text-[#597274] max-w-xs mt-1">
-                    Focused execution, streamlined digital systems, and clean modern development.
+                    Founder of {AGENCY_CONFIG.name} · {AGENCY_CONFIG.tagline}
                   </p>
                 </div>
               )}
 
-              {/* Subtle editorial card corner badge */}
-              <div className="absolute bottom-4 left-4 sm:bottom-5 sm:left-5 px-3 py-1.5 rounded-lg bg-white/90 backdrop-blur-xs border border-[#07545A]/10 shadow-xs flex items-center gap-2">
+              {/* Founder Badge */}
+              <div className="absolute bottom-4 left-4 sm:bottom-5 sm:left-5 px-3.5 py-1.5 rounded-lg bg-white/95 backdrop-blur-xs border border-[#07545A]/10 shadow-xs flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#FF9D00] animate-pulse" />
-                <span className="text-xs font-medium text-[#18383A]">
-                  Ovvela · Modern & Purpose-Built
+                <span className="text-xs font-semibold text-[#18383A]">
+                  {AGENCY_CONFIG.founderName} · Founder
                 </span>
               </div>
             </div>
